@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8.2) # 3.8.0 is minimum version that allow Linux remote building and debugging
 
-project(CraftBase)
+project(craftbase)
 
 # Remove trailing '\' and '/' at the end of the path, so can reliably compare
 STRING(REGEX REPLACE "[/\\]+$" "" CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR})
@@ -28,7 +28,7 @@ set(MODULE_FILES
 )
 
 
-add_library(DLib SHARED ${MODULE_FILES})
+add_library(craftbase SHARED ${MODULE_FILES})
 
 
 #include(GenerateExportHeader)
@@ -37,11 +37,11 @@ add_library(DLib SHARED ${MODULE_FILES})
 
 # Make sure the compiler can find include files for our Hello library
 # when other libraries or executables link to Hello
-target_include_directories(DLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(craftbase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 
 # List files that install and/or package should provide.
 # Each library should know what it want to distribute,
 # which files are internal or intermediate and which are public library export.
-install(TARGETS DLib DESTINATION DLib-bin)
-install(FILES ${SOURCE_FILES1} DESTINATION DLib-include)
+install(TARGETS craftbase DESTINATION craftbase/bin)
+install(FILES ${SOURCE_FILES1} DESTINATION craftbase/include)
