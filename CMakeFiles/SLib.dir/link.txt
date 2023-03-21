@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libSLib.a CMakeFiles/SLib.dir/src/a.c.obj
-C:\MinGW\bin\ranlib.exe libSLib.a

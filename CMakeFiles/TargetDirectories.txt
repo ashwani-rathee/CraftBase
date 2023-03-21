@@ -1,7 +1,0 @@
-C:/Users/lenono/Documents/StudyCode/CraftBase/CMakeFiles/DLib.dir
-C:/Users/lenono/Documents/StudyCode/CraftBase/CMakeFiles/edit_cache.dir
-C:/Users/lenono/Documents/StudyCode/CraftBase/CMakeFiles/rebuild_cache.dir
-C:/Users/lenono/Documents/StudyCode/CraftBase/CMakeFiles/list_install_components.dir
-C:/Users/lenono/Documents/StudyCode/CraftBase/CMakeFiles/install.dir
-C:/Users/lenono/Documents/StudyCode/CraftBase/CMakeFiles/install/local.dir
-C:/Users/lenono/Documents/StudyCode/CraftBase/CMakeFiles/install/strip.dir
