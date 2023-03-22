@@ -43,5 +43,5 @@ target_include_directories(libcraftbase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 # List files that install and/or package should provide.
 # Each library should know what it want to distribute,
 # which files are internal or intermediate and which are public library export.
-install(TARGETS craftbase DESTINATION ${libdir}/bin)
+install(TARGETS libcraftbase DESTINATION ${libdir}/bin)
 install(FILES ${SOURCE_FILES1} DESTINATION${libdir}/include)
