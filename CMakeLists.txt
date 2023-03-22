@@ -20,11 +20,11 @@ endif()
 
    
 FILE(GLOB SOURCE_FILES src/*.c)
-FILE(GLOB SOURCE_FILES1 src/*.h)
+FILE(GLOB HEADER_FILES src/*.h)
 
 set(MODULE_FILES
 	${SOURCE_FILES}
-	${SOURCE_FILES1}
+	${HEADER_FILES}
 )
 
 
@@ -37,11 +37,11 @@ add_library(libcraftbase SHARED ${MODULE_FILES})
 message(CMAKE_CURRENT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
 # Make sure the compiler can find include files for our Hello library
 # when other libraries or executables link to Hello
-target_include_directories(libcraftbase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${SOURCE_FILES1})
+target_include_directories(libcraftbase PUBLIC ${HEADER_FILES})
 
 message(LIBDIR="${libdir}")
 # List files that install and/or package should provide.
 # Each library should know what it want to distribute,
 # which files are internal or intermediate and which are public library export.
 install(TARGETS libcraftbase DESTINATION ${libdir})
-install(FILES ${SOURCE_FILES1} DESTINATION ${includedir})
+install(FILES ${HEADER_FILES} DESTINATION ${includedir})
