@@ -34,12 +34,12 @@ add_library(libcraftbase SHARED ${MODULE_FILES})
 #include(GenerateExportHeader)
 #generate_export_header(DLib)
 
-
+message(CMAKE_CURRENT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
 # Make sure the compiler can find include files for our Hello library
 # when other libraries or executables link to Hello
-target_include_directories(libcraftbase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(libcraftbase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${SOURCE_FILES1})
 
-
+message(LIBDIR="${libdir}")
 # List files that install and/or package should provide.
 # Each library should know what it want to distribute,
 # which files are internal or intermediate and which are public library export.
