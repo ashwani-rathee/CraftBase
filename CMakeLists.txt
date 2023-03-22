@@ -44,4 +44,4 @@ message(LIBDIR="${libdir}")
 # Each library should know what it want to distribute,
 # which files are internal or intermediate and which are public library export.
 install(TARGETS libcraftbase DESTINATION ${libdir}/bin)
-install(FILES ${SOURCE_FILES1} DESTINATION${libdir}/include)
+install(FILES ${SOURCE_FILES1} DESTINATION ${libdir}/include)
